@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ #nav-menu {
+    background-color: gainsboro;
+    height: 50px;
+}
+.container {
+  margin: 50px auto;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border: 10px solid;
+  border-top-color: #856036;
+  border-left-color: #5d4426;
+  border-bottom-color: #856036;
+  border-right-color: #5d4426;
+  position: relative;
+}
+.photo {
+  position: absolute;
+ width: 100%;
+
+        height: 100%;
+  animation: round 16s infinite;
+  opacity: 0;
+}
+@keyframes round {
+  25% {
+padding-top:200px;
+    opacity: 1;
+  }
+  40% {
+padding-top:200px;
+    opacity: 0;
+  }
+}
+-webkit-@keyframes round {
+  25% {
+padding-top:200px;
+    opacity: 1;
+    -webkit-opacity: 1;
+  }
+  40% {
+padding-top:200px;
+    opacity: 0;
+    -webkit-opacity: 0;
+  }
+}
+img:nth-child(1) {
+  animation-delay: 12s;
+}
+ 
+img:nth-child(2) {
+  animation-delay: 8s;
+}
+ 
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+ 
+img:nth-child(4) {
+  animation-delay: 0s;
+}
+</style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="nav__menu" id="nav-menu" >
+    <ul class="nav__list"style="padding-top: 15px;">
+   <a href="home.html" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;
+    <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;
+     <a href="education.html" target="_blank">Education</a>&nbsp;&nbsp;&nbsp;
+    <a href="skills.html" target="_blank">Skills</a>&nbsp;&nbsp;&nbsp;
+     <a href="work-experience.html" target="_blank">Work Experience</a>&nbsp;&nbsp;&nbsp;
+   <a href="projects.html" target="_blank">Projects</a>&nbsp;&nbsp;&nbsp;
+    <a href="certifications.html" target="_blank">Certifications</a>&nbsp;&nbsp;&nbsp;
+     <a href="mailto:peddabharathmiriyala@gmail.com" class="nav_link">Contact</a>&nbsp;&nbsp;&nbsp;
+    </ul>
+</div>
+<section id="certifications"style=" width: 1100px; padding-left: 50px; align-content: center;">
+  <h2 style="background-color:DodgerBlue;">Certifications</h2>
+  <ul>
+    <li>Certified with AWS Academy Graduate – AWS Academy Cloud Foundation, issued by Amazon Web Services Training and Certification.</li>
+    <li>Completed the “Python” course offered by the University of Michigan, on the Coursera Platform.</li>
+    <li>Qualified the “Joy of Computing Python” course by the National Programme on Technology Enhanced Learning (NPTEL) with 80%.</li>
+
+ <div class="container" align="bottom">
+  <img class='photo'  src="img6.jpg"/>
+  <img class='photo'  src="img7.png"/>
+  <img class='photo'  src="img8.jpg" />
+  <img class='photo'  src="img9.jpg"  />
+</div>
+  </ul>
+</section>
+<br></br>
+<br></br>
+<br></br>
+
+
+</body>
+</html>

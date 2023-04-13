@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedda Bharath Miriyala</title>
+<style>
+img{
+margin-left:440px;
+}
+#nav-menu {
+    background-color: gainsboro;
+    height: 50px;
+}
+.css2{
+  color:blue;
+  background-color:powderblue;
+  font-size:30px;
+  font-family: Leelawadee UI Semilight;
+  font-style:italic;
+  font-weight:600;
+  letter-spacing: 3px;
+}
+.gallery {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  display: none;
+}
+
+img.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 10px;
+color:white;
+}
+
+.arrow-right {
+  right: 10px;
+color:white;
+}
+
+</style>
+
+</head>
+<body min-height="100%">
+  <!-- Navigation -->
+  <div class="nav__menu" id="nav-menu" >
+    <ul class="nav__list"style="padding-top: 15px;">
+   <a href="home.html" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;
+    <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;
+     <a href="education.html" target="_blank">Education</a>&nbsp;&nbsp;&nbsp;
+    <a href="skills.html" target="_blank">Skills</a>&nbsp;&nbsp;&nbsp;
+     <a href="work-experience.html" target="_blank">Work Experience</a>&nbsp;&nbsp;&nbsp;
+   <a href="projects.html" target="_blank">Projects</a>&nbsp;&nbsp;&nbsp;
+    <a href="certifications.html" target="_blank">Certifications</a>&nbsp;&nbsp;&nbsp;
+     <a href="mailto:peddabharathmiriyala@gmail.com" class="nav_link">Contact</a>&nbsp;&nbsp;&nbsp;
+    </ul>
+</div>
+<div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+  </nav>
+<div style="background: linear-gradient(45deg, black, transparent);">
+ <marquee class="css2" direction="right">Welcome to my portfolio</marquee>
+    <h1 style="color:ghostwhite" align="center" >Pedda Bharath Miriyala</h1>
+    <h2 align="center" style="color:ghostwhite">Computer Science Graduate Student</h2>
+<div class="gallery">
+  <img src="Image.jpeg" class="active" height="300px" width="300px" align="center" margin-left="470px">
+  <img src="image_2.jpeg" height="300px" width="300px" align="center" margin-left="470px">
+  <img src="image_3.jpeg" height="300px" width="300px" align="center" margin-left="470px">
+  <a class="arrow arrow-left" href="#" onclick="prevImage()">&#10094;</a>
+  <a class="arrow arrow-right" href="#" onclick="nextImage()">&#10095;</a>
+</div>
+
+</div>
+<script>
+var images = document.querySelectorAll('.gallery img');
+var currentIndex = 0;
+
+function showImage(index) {
+  images[currentIndex].classList.remove('active');
+  images[index].classList.add('active');
+  currentIndex = index;
+}
+
+function nextImage() {
+  var index = (currentIndex + 1) % images.length;
+  showImage(index);
+}
+
+function prevImage() {
+  var index = (currentIndex + images.length - 1) % images.length;
+  showImage(index);
+}
+</script>
+</body>
+<html>
